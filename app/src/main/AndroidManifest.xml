@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ioi.smarthlogin" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SmartH"
+            android:label="@string/title_activity_smart_h"
+            android:parentActivityName=".Login" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ioi.smarthlogin.Login" />
+        </activity>
+        <activity
+            android:name=".sett"
+            android:label="@string/title_activity_sett"
+            android:parentActivityName=".SmartH" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ioi.smarthlogin.SmartH" />
+        </activity>
+        <activity
+            android:name=".devices"
+            android:label="@string/title_activity_devices"
+            android:parentActivityName=".SmartH" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ioi.smarthlogin.SmartH" />
+        </activity>
+        <activity
+            android:name=".scene"
+            android:label="@string/title_activity_scene"
+            android:parentActivityName=".SmartH" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ioi.smarthlogin.SmartH" />
+        </activity>
+        <activity
+            android:name=".monitor"
+            android:label="@string/title_activity_monitor"
+            android:parentActivityName=".SmartH" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ioi.smarthlogin.SmartH" />
+        </activity>
+        <activity
+            android:name=".powerControl"
+            android:label="@string/title_activity_power_control"
+            android:parentActivityName=".devices" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ioi.smarthlogin.devices" />
+        </activity>
+    </application>
+
+</manifest>
